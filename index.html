@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM insetion/updation/styling</title>
+</head>
+<body>
+    <h1 id="h1">This is heading one</h1>
+    <p id="pera">This is a paragraph</p>  
+    <div id="fdiv">
+        <p>this is my first
+            <span>
+                Text
+            </span>
+        </p>
+        <p>This is my second pera</p>
+    </div>
+</body>
+</html>
+<script>
+    //Acessing DOM elements
+    let h1 = document.getElementById("h1");
+    let pera = document.getElementById("pera");
+    //changing the content of the elements
+    h1.innerHTML = "This heading is changed";
+    pera.innerHTML= "This pera is changed";
+    //print the elements to the console
+    console.log(h1.innerHTML);
+    console.log(pera.innerHTML);
+    //fdiv
+    let element = document.querySelector('#fdiv');
+    console.log(element.innerText);
+    console.log(element.textContent);
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent Element</title>
+</head>
+<body>
+    <div style="padding: 1rem; background-color: yellow; margin: 1rem;">
+        hello world
+        <div id="mydiv"style="border: 1px solid black; padding: 10px; background-color: lightgray;">
+            <p>First</p>
+            <h1>Second</h1>
+            <p>Third</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let mydiv = document.querySelector('#mydiv');
+    let newElement = document.createElement('span');
+    newElement.textContent = "This is a new span Element";
+    // Insert the new element before the first child of mydiv
+    // mydiv.insertAdjacentElement('afterbegin', newElement);
+
+    //insert the new element before starting of the mydiv
+    // mydiv.insertAdjacentElement('beforebegin',newElement);
+    
+    // Insert the new element after the last child of mydiv
+    // mydiv.insertAdjacentElement('beforeend',newElement);
+    
+    // Insert the new element after the mydiv
+    mydiv.insertAdjacentElement('afterend',newElement);
+</script>

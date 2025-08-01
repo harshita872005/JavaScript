@@ -19,4 +19,16 @@ for(let i=1;i<=100;i++){
 }
 document.body.appendChild(mydiv);
 const t4 = performance.now();
-console.log("total time by code 2:"+(t4-t3) + " milliseconds");
+console.log("total time by code 2:"+(t4-t3) + " milliseconds");  
+
+
+//best code document fragment
+let fragment = document.createDocumentFragment();
+for(let i =1;i<=5;i++){
+    let para = document.createElement('p');
+    para.textContent = "This is Para"+i;
+    //now reflow and no repaint 
+    fragment.appendChild(para);
+}
+//the below line takes 1 reflow and 1 repaint
+document.body.appendChild(fragment);

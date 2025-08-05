@@ -46,3 +46,5 @@ async function processData() {
     await getData();
 }
 processData();
+// processData function is an async function that first posts data and then gets data
+// It uses await to ensure that the post request is completed before the get request is made

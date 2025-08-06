@@ -53,7 +53,7 @@ function displayWeatherInfo(data) {
     tempDisplay.classList.add("tempDisplay");
     card.appendChild(tempDisplay);
 
-    humidityDisplay.textContent = `${humidity}%`;
+    humidityDisplay.textContent = `Humidity: ${humidity}%`;
     humidityDisplay.classList.add("humidityDisplay");
     card.appendChild(humidityDisplay);
 

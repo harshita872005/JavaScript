@@ -4,7 +4,6 @@ async function fetchData(){
         const response = await fetch (`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
         if(!response.ok){
-            
             throw new Error("Could not fetch resource");
         }
         const data = await response.json();
@@ -18,5 +17,5 @@ async function fetchData(){
         console.error(error);
     }
 }
-fetchData();
+// fetchData();
 // This ensures that the data is processed in the correct order, maintaining the integrity of the operations
